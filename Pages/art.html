@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Art</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/components/navbar/navbar.css">
+</head>
+<body>
+        <!--Menu-->
+        <div id="navbar"></div>
+
+        <script>
+          fetch('/components/navbar/navbar.html')
+            .then(res => res.text())
+            .then(data => {
+              document.getElementById('navbar').innerHTML = data;
+            });
+        </script>
+
+        <h1>Art & Illustration</h1>
+</body>
+</html>

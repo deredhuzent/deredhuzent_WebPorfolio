@@ -3,10 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Home</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/components/navbar/navbar.css">
 </head>
 <body>
+    <!--Menu-->
+    <div id="navbar"></div>
+
+    <script>
+      fetch('/components/navbar/navbar.html')
+        .then(res => res.text())
+        .then(data => {
+          document.getElementById('navbar').innerHTML = data;
+        });
+    </script>
     
+   </script>
+
+
+<!--Home Page-->
+<h1>Home Page</h1>
 </body>
 </html>
 

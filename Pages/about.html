@@ -4,9 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me </title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/components/navbar/navbar.css">
 </head>
 <body>
-    
+    <!-- Menu -->
+    <div id="navbar"></div>
+
+    <script>
+      fetch('/components/navbar/navbar.html')
+        .then(res => res.text())
+        .then(data => {
+          document.getElementById('navbar').innerHTML = data;
+        });
+    </script>
     <!-- 🌟 ABOUT ME SECTION -->
     <section id="about-me">
         <h1>💫 Who I am & What Moves me </h1>
