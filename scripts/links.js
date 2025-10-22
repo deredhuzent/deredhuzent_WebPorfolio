@@ -13,7 +13,7 @@ const links = [
 // 📁 Imgs paths
 const logoLight = "/assets/images/logo_light.png";
 const logoDark = "/assets/images/logo_dark.png";
-const faviconImg = "/assets/images/favicon.png"
+const faviconImg = "/assets/images/favicon.ico"
 
 //Theme Detection
 const prefersDark = window.matchMedia("(prefers-colo-scheme: dark)").matches;
