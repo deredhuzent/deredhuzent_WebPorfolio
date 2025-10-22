@@ -1,0 +1,1 @@
+console.log("Welcome! I'm just crearting all the baisc settings!")
