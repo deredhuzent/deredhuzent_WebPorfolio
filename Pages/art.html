@@ -1,24 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Art</title>
-    <link rel="stylesheet" href="/styles/style.css">
-    <link rel="stylesheet" href="/components/navbar/navbar.css">
-</head>
-<body>
-        <!--Menu-->
-        <div id="navbar"></div>
+    <!--all head links-->
+    <script src="/scripts/links.js"></script>
+  </head>
+  <body>
+    <!--MENUS-->
+    <div id="navbar"></div>
 
-        <script>
-          fetch('/components/navbar/navbar.html')
-            .then(res => res.text())
-            .then(data => {
-              document.getElementById('navbar').innerHTML = data;
-            });
-        </script>
+    <!--BODY-->
+    <main class="page_content">
+      <h1>Art & Illustration</h1>
+    </main>
 
-        <h1>Art & Illustration</h1>
-</body>
+    <!-- FOOTER-->
+    <div id="footer"></div>
+  </body>
 </html>

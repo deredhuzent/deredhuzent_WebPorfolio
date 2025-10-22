@@ -1,78 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me </title>
-    <link rel="stylesheet" href="/styles/style.css">
-    <link rel="stylesheet" href="/components/navbar/navbar.css">
-</head>
-<body>
-    <!-- Menu -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Me</title>
+    <!--all head links-->
+    <script src="/scripts/links.js"></script>
+  </head>
+  <body>
+    <!--MENU-->
     <div id="navbar"></div>
 
-    <script>
-      fetch('/components/navbar/navbar.html')
-        .then(res => res.text())
-        .then(data => {
-          document.getElementById('navbar').innerHTML = data;
-        });
-    </script>
-    <!-- 🌟 ABOUT ME SECTION -->
-    <section id="about-me">
-        <h1>💫 Who I am & What Moves me </h1>
-        <h3>Game Developer & Creative Storyteller with a visual heart </h3>
-        <p> I’m Deryana Dhuzent, a Mexican creative technologist based in Vancouver. 
-        I studied video game development, but my path has been anything but linear. 
-        Through unexpected turns, I’ve built a multidisciplinary practice that blends code, art, and community.
-            
-        What moves me is the power of creativity to heal, connect, and transform. 
-        Whether I’m painting, coding, or designing for a small business, I create with intention—always thinking about how it feels, how it functions, and who it serves.
-        </p>
-    
-        <h2> 🎨 Where Art Meets Tech </h2>
+    <!--BODY-->
+    <main class="page_content">
+      <!-- 🌟 ABOUT ME SECTION -->
+      <section id="about-me">
+        <h1>💫 Who I am & What Moves me</h1>
+        <h3>Game Developer & Creative Storyteller with a visual heart</h3>
         <p>
-        My artistic and technical paths aren’t separate, they’re intertwined. 
-        I approach programming like a artist: with curiosity, iteration, and a deep respect for process. 
-        And I approach art like a developer: with structure, logic, and a desire to build something meaningful.
-    
-        This fusion shows up in everything I do, from game prototypes to branding projects to community murals. 
-        It’s not about choosing one side; it’s about letting both inform each other.
+          I’m Deryana Dhuzent, a Mexican creative technologist based in
+          Vancouver. I studied video game development, but my path has been
+          anything but linear. Through unexpected turns, I’ve built a
+          multidisciplinary practice that blends code, art, and community. What
+          moves me is the power of creativity to heal, connect, and transform.
+          Whether I’m painting, coding, or designing for a small business, I
+          create with intention—always thinking about how it feels, how it
+          functions, and who it serves.
         </p>
-    
-        <h2>🌱 What Sets Me Apart </h2>
+
+        <h2>🎨 Where Art Meets Tech</h2>
         <p>
-            -I work iteratively, embracing feedback and evolution.
-            -I bring cultural sensitivity and bilingual fluency to every project.
-            -I prioritize ethics, accessibility, and emotional resonance in my creative decisions.
-            -I thrive in collaborative spaces, especially those rooted in community care.
-            -My portfolio isn’t just a showcase, but a reflection of my values, my growth, and my commitment to creating with purpose.</p>
-    
-        <h2> 🧭 My Journey</h2>
-        <p>
-            I studied video game development at Vancouver Film School during the height of the COVID-19 pandemic. 
-            While I graduated with technical training, visa delays and personal challenges made it difficult to enter the industry right away. 
-            In that uncertain time, art became my refuge, a way to process emotions, reconnect with myself, and begin healing. 
-            Somehow, it also became the foundation of my business.
-            What started as therapy evolved into a visual language that now lives across illustrations, paintings, and community projects.
+          My artistic and technical paths aren’t separate, they’re intertwined.
+          I approach programming like a artist: with curiosity, iteration, and a
+          deep respect for process. And I approach art like a developer: with
+          structure, logic, and a desire to build something meaningful. This
+          fusion shows up in everything I do, from game prototypes to branding
+          projects to community murals. It’s not about choosing one side; it’s
+          about letting both inform each other.
         </p>
-    
-        <h2>🧠 How I Work </h2>
+
+        <h2>🌱 What Sets Me Apart</h2>
         <p>
-            My creative process is iterative, intuitive, and deeply human. 
-            I blend technical precision with emotional storytelling, whether I’m coding a game mechanic or designing a visual identity. 
-            I care about aesthetics, functionality, and how each piece connects with its audience. 
-            My work is shaped by cultural sensitivity, ethical values, and a commitment to community.
+          -I work iteratively, embracing feedback and evolution. -I bring
+          cultural sensitivity and bilingual fluency to every project. -I
+          prioritize ethics, accessibility, and emotional resonance in my
+          creative decisions. -I thrive in collaborative spaces, especially
+          those rooted in community care. -My portfolio isn’t just a showcase,
+          but a reflection of my values, my growth, and my commitment to
+          creating with purpose.
         </p>
-        <h2> 🧪 Currently </h2>
+
+        <h2>🧭 My Journey</h2>
         <p>
-            I'm rebuilding my portfolio from scratch to not only showcase my work, but to re-engage with programming and strenghten my techincal foundations. 
-            I'm practicing new skills, improving existing ones, and gradually sharing that process through each update. This space is also where I experiment, refine, and grow. 
-            I also, continue to support local businesses with branding and web design, while nurturing my art practice through community involvement and personal projects. 
-            Whether it's game dev, visual storytelling, or collaborative design, this portfolio reflects my ongoing journey as a creative.
+          I studied video game development at Vancouver Film School during the
+          height of the COVID-19 pandemic. While I graduated with technical
+          training, visa delays and personal challenges made it difficult to
+          enter the industry right away. In that uncertain time, art became my
+          refuge, a way to process emotions, reconnect with myself, and begin
+          healing. Somehow, it also became the foundation of my business. What
+          started as therapy evolved into a visual language that now lives
+          across illustrations, paintings, and community projects.
         </p>
-    </section>
-</body>
+
+        <h2>🧠 How I Work</h2>
+        <p>
+          My creative process is iterative, intuitive, and deeply human. I blend
+          technical precision with emotional storytelling, whether I’m coding a
+          game mechanic or designing a visual identity. I care about aesthetics,
+          functionality, and how each piece connects with its audience. My work
+          is shaped by cultural sensitivity, ethical values, and a commitment to
+          community.
+        </p>
+        <h2>🧪 Currently</h2>
+        <p>
+          I'm rebuilding my portfolio from scratch to not only showcase my work,
+          but to re-engage with programming and strenghten my techincal
+          foundations. I'm practicing new skills, improving existing ones, and
+          gradually sharing that process through each update. This space is also
+          where I experiment, refine, and grow. I also, continue to support
+          local businesses with branding and web design, while nurturing my art
+          practice through community involvement and personal projects. Whether
+          it's game dev, visual storytelling, or collaborative design, this
+          portfolio reflects my ongoing journey as a creative.
+        </p>
+      </section>
+    </main>
+
+    <!-- FOOTER-->
+    <div id="footer"></div>
+  </body>
 </html>
 
 <!--
