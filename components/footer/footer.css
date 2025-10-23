@@ -1,4 +1,4 @@
-.site-footer {
+.footer {
     background-color: #18181a;
     padding: 2rem 3rem;
     font-size: 0.95rem;
@@ -6,7 +6,7 @@
     border-top: 1px solid #ddd;
   }
   
-  .footer-top {
+  /* .footer-top {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -58,4 +58,4 @@
   .social-icons li a:hover {
     color: #0077cc;
   }
-  
+   */

@@ -3,6 +3,7 @@ import { setupHead } from "./setupHead.js";
 import { setupLogo } from "./setupLogo.js";
 import { loadComponent } from "./loadComponents.js";
 import { setupMenuToggle } from "./setupMenuToggle.js";
+import { setupFooter} from "./setupFooter.js";
 
 // 🌐 DOM
 const logoId = "site_logo"
@@ -21,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
     //load navbar (menu)
     loadComponent("navbar", "/components/navbar/navbar.html", () => {
       setupLogo(logoId, logoLight, logoDark);
-      setupMenuToggle //hamburger animation
+      setupMenuToggle(); //hamburger animation
   
       // detect active link on Menu
       const currentPath = window.location.pathname;
@@ -33,6 +34,9 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   
-    //load footer
-    loadComponent("footer", "/components/footer/footer.html");
+  //load footer
+  loadComponent("footer", "/components/footer/footer.html", () => {
+  setupFooter();
   });
+
+});
