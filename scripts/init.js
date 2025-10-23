@@ -1,79 +1,29 @@
-// 🌐 DOM
-const head = document.head;
-const logoId = "site_logo"
-let logoElement = document.getElementById(logoId);
+//imports
+import { setupHead } from "./setupHead.js";
+import { setupLogo } from "./setupLogo.js";
+import { loadComponent } from "./loadComponents.js";
+import { setupMenuToggle } from "./setupMenuToggle.js";
 
-//stylesheets to load
-const links = [
-  "/styles/style.css",
-  "/components/navbar/navbar.css",
-  "/components/footer/footer.css"
-];
+// 🌐 DOM
+const logoId = "site_logo"
+// let logoElement = document.getElementById(logoId);
 
 // 📁 Imgs paths
 const logoLight = "/assets/images/logo_light.png";
 const logoDark = "/assets/images/logo_dark.png";
-const faviconImg = "/assets/images/favicon.ico"
-
-//Theme Detection
-const prefersDark = window.matchMedia("(prefers-colo-scheme: dark)").matches;
-
-function setupHead() {
-    //loading styles
-    links.forEach(href => {
-      const link = document.createElement("link");
-      link.rel = "stylesheet";
-      link.href = href;
-      head.appendChild(link);
-    });
-    
-    //meta viewport
-    const meta = document.createElement("meta");
-    meta.name = "viewport";
-    meta.content = "width=device-width, initial-scale=1.0";
-    head.appendChild(meta);
-
-    //loading Favicon
-    const favicon = document.createElement("link");
-    favicon.rel = "icon";
-    favicon.href = faviconImg;
-    head.appendChild(favicon);
-}
-
-function setupLogo(){
-    logoElement = document.getElementById(logoId);
-    //DYNAMIC LOGO -> assign logo according to theme
-    if (logoElement) {
-        logoElement.src = prefersDark ? logoDark : logoLight;
-    }
-    
-    //change of logo if theme changes real time
-    window.matchMedia("prefers-colorscheme: dark").addEventListener("change", e => {
-        const logo = document.getElementById(logoId);
-        if(logo){
-            logo.src = e.matches ? logoDark : logoLight;
-        }
-    })
-}
-
-//Compoment Loader
-function loadComponent(id, path, callback) {
-    fetch(path)
-    .then(res => res.text())
-    .then(html => {
-        document.getElementById(id).innerHTML = html;
-        if(typeof callback === 'function') callback();
-    })
-}
+const faviconImg = "/assets/images/favicon.ico";
 
 //init
 document.addEventListener("DOMContentLoaded", () => {
-    setupHead();
+  //config head
+    setupHead(faviconImg);
   
+    //load navbar (menu)
     loadComponent("navbar", "/components/navbar/navbar.html", () => {
-      setupLogo();
+      setupLogo(logoId, logoLight, logoDark);
+      setupMenuToggle //hamburger animation
   
-      // detect active link
+      // detect active link on Menu
       const currentPath = window.location.pathname;
       const links = document.querySelectorAll(".navbar-links li a");
       links.forEach(link => {
@@ -83,5 +33,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   
+    //load footer
     loadComponent("footer", "/components/footer/footer.html");
   });
