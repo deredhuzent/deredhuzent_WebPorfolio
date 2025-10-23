@@ -4,17 +4,19 @@ export function setupLogo(logoId, logoLight, logoDark) {
     const prefersDark = themeQuery.matches; 
     const logoElement = document.getElementById(logoId);
 
-    //which logo to load
+    //load logo
     if (logoElement) {
-        logoElement.src = prefersDark ? logoDark : logoLight;
+        logoElement.src = logoLight;
+        //which logo to load dark or light
+        // logoElement.src = prefersDark ? logoDark : logoLight;
     }  
 
     //check theme in real time
-    themeQuery.addEventListener("change", e => {
-        const logo = document.getElementById(logoId);
-        if(logo) {
-            logo.src = e.matches ? logoDark : logoLight;
-        }
-    })
+    // themeQuery.addEventListener("change", e => {
+    //     const logo = document.getElementById(logoId);
+    //     if(logo) {
+    //         logo.src = e.matches ? logoDark : logoLight;
+    //     }
+    // })
 
 }
