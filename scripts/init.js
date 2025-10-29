@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
     //load navbar (menu)
     loadComponent("navbar", "/components/navbar/navbar.html", () => {
-      setupLogo(logoId, logoLight, logoDark);
+      setupLogo(logoId, logoLight, logoDark, ".navbar");
       setupMenuToggle(); //hamburger animation
   
       // detect active link on Menu
@@ -37,6 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
   //load footer
   loadComponent("footer", "/components/footer/footer.html", () => {
   setupFooter();
+  setupLogo("footer_logo", logoLight, logoDark, ".footer");
   });
 
 });

@@ -12,7 +12,9 @@
   /* logo Menu */
   .navbar-logo img {
     height: 60px;
+    width: auto;
     display: block;
+    object-fit: contain;
   }
   
   /* Menu Links */

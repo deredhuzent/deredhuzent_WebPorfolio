@@ -1,16 +1,32 @@
 .footer {
-    background-color: #18181a;
+    background-color: #1d1820;
     padding: 2rem 3rem;
     font-size: 0.95rem;
     color: #555;
     border-top: 1px solid #ddd;
   }
-  
-  /* .footer-top {
+
+  .footer_container {
+    display: flex;
+
+  }
+
+  /* logo footer  */
+  .footer-logo img {
+    height: 60px;
+    width: auto;
+    display: block;
+    object-fit: contain;
+  }
+
+  .footer_copyright {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+  }
+  
+  /* .footer-top {
   }
 
   .footer-links {
