@@ -28,11 +28,14 @@
 
   .navbar-links li a {
     position: relative;
+    display: inline-block;
     text-decoration: none;
     color: #333;
     font-weight: 500;
     padding: 0.5rem 0.75rem;
-    transition: all 0.3s ease;
+    --link-scale: 1;
+    transform: scale(var(--link-scale)) translateY(0);
+    transition: all 0.3s ease, color 0.3s ease;
   }
   
   /* on hover */
@@ -46,11 +49,37 @@
     background-color:#e9b7f5;
     transition: width 0.3s ease;    
   }
+  
+  /* brinquito cuando hover */
+  .navbar-links li a:hover {
+      animation: nav-link-hover-bounce 0.35s ease;
+  }
+
+  /* cuando esta activo */
+  .navbar-links li a.active {
+    --link-scale: 1.08;
+    font-weight: 600;
+  }
 
 .navbar-links li a:hover::after {
     width: 100%;
 } 
 
-.navbar-links li a.active::after {
-    width: 100%;
+.navbar-links li a:hover {
+    animation: nav-link-hover-bounce 0.35s ease;
+}
+
+@keyframes nav-link-hover-bounce {
+    0% {
+        transform: scale(var(--link-scale)) translateY(0);
+    }
+    45% {
+        transform: scale(calc(var(--link-scale) * 1.02)) translateY(-4px);
+    }
+    70% {
+        transform: scale(var(--link-scale)) translateY(1px);
+    }
+    100% {
+        transform: scale(var(--link-scale)) translateY(0);
+    }
 }
