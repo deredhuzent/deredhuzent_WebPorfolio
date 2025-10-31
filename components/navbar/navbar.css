@@ -35,7 +35,7 @@
     padding: 0.5rem 0.75rem;
     --link-scale: 1;
     transform: scale(var(--link-scale)) translateY(0);
-    transition: all 0.3s ease, color 0.3s ease;
+    transition: transform 0.25s ease, color 0.3s ease;
   }
   
   /* on hover */
@@ -55,20 +55,26 @@
       animation: nav-link-hover-bounce 0.35s ease;
   }
 
-  /* cuando esta activo */
+  /* linea subrayando cuando esta activa la pagina */
   .navbar-links li a.active {
-    --link-scale: 1.08;
-    font-weight: 600;
+    --link-scale: 1.1;
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-color: #e9b7f5;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 6px;
   }
-
+  
 .navbar-links li a:hover::after {
     width: 100%;
 } 
 
+/* triggers subtle bounce when hover  */
 .navbar-links li a:hover {
     animation: nav-link-hover-bounce 0.35s ease;
 }
 
+/* defines hover bounce motion */
 @keyframes nav-link-hover-bounce {
     0% {
         transform: scale(var(--link-scale)) translateY(0);
