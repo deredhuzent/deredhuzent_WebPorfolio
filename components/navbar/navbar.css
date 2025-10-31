@@ -44,7 +44,7 @@
     width: 0%;
     height: 2px;
     background-color:#e9b7f5;
-    transition: with 0.3s ease;    
+    transition: width 0.3s ease;    
   }
 
 .navbar-links li a:hover::after {
