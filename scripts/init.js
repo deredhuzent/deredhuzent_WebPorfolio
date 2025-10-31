@@ -16,7 +16,7 @@ const faviconImg = "/assets/images/favicon.ico";
 
 //init
 document.addEventListener("DOMContentLoaded", () => {
-  //config head
+  //config head and favicon
     setupHead(faviconImg);
   
     //load navbar (menu)
@@ -24,20 +24,36 @@ document.addEventListener("DOMContentLoaded", () => {
       setupLogo(logoId, logoLight, logoDark, ".navbar");
       setupMenuToggle(); //hamburger animation
   
-      // detect active link on Menu
-      const currentPath = window.location.pathname;
+      // detect active link on Menu -> apply active class
+      const currentPath = window.location.pathname.toLowerCase();
       const links = document.querySelectorAll(".navbar-links li a");
+      
+      // recorre cada link del menu y compara href con url actual. Todo se convierte a minusculas Page -> page
       links.forEach(link => {
-        if (link.getAttribute("href") === currentPath) {
-          link.classList.add("active");
-        }
-      });
-    });
+        const href = link.getAttribute("href");
+        if(!href) return;
+      })
+
+      const normalizedHref = href.toLowerCase();
+
+      // exact match -> URL es identica a href
+      const matchesExactPath = currentPath === normalizedHref;
+
+      // suffix match -> URL ends with href
+      const matchesTail = currentPath.endsWith(normalizedHref);
+
+      // quitar index.html para home -> solo sale /
+            const isHomeIndex =
+        normalizedHref.endsWith("index.html") && (currentPath === "/" || currentPath.endsWith("/"));
+
+      if (matchesExactPath || matchesTail || isHomeIndex) {
+        link.classList.add("active");
+      }
+  });
   
   //load footer
   loadComponent("footer", "/components/footer/footer.html", () => {
-  setupFooter();
-  setupLogo("footer_logo", logoLight, logoDark, ".footer");
+    setupFooter();
+    setupLogo("footer_logo", logoLight, logoDark, ".footer");
   });
-
 });
