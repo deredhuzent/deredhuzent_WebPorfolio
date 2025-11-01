@@ -1,4 +1,4 @@
-// catalog of icons
+// library of icons
 const ICONS = {
     github: {
         white: "/assets/icons/github_white.png",
